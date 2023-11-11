@@ -7,6 +7,7 @@ const NewArrival = () => {
         top new arrival
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        
         <div className="bg-white shadow rounded overflow-hidden group">
           <div className="relative">
             <img
