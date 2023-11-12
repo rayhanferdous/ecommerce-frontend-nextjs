@@ -148,35 +148,35 @@ const Header = () => {
                   alt="Mattress"
                   className="w-5 h-5 object-contain"
                 />
-                <span class="ml-6 text-gray-600 text-sm">Mattress</span>
+                <span className="ml-6 text-gray-600 text-sm">Mattress</span>
               </a>
             </div>
           </div>
 
-          <div class="flex items-center justify-between flex-grow md:pl-12 py-5">
-            <div class="flex items-center space-x-6 capitalize">
+          <div className="flex items-center justify-between flex-grow md:pl-12 py-5">
+            <div className="flex items-center space-x-6 capitalize">
               <a
                 href="index.html"
-                class="text-gray-200 hover:text-white transition"
+                className="text-gray-200 hover:text-white transition"
               >
                 Home
               </a>
               <a
                 href="pages/shop.html"
-                class="text-gray-200 hover:text-white transition"
+                className="text-gray-200 hover:text-white transition"
               >
                 Shop
               </a>
-              <a href="#" class="text-gray-200 hover:text-white transition">
+              <a href="#" className="text-gray-200 hover:text-white transition">
                 About us
               </a>
-              <a href="#" class="text-gray-200 hover:text-white transition">
+              <a href="#" className="text-gray-200 hover:text-white transition">
                 Contact us
               </a>
             </div>
             <a
               href="pages/login.html"
-              class="text-gray-200 hover:text-white transition"
+              className="text-gray-200 hover:text-white transition"
             >
               Login
             </a>
