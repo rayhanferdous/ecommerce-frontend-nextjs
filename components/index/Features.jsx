@@ -4,7 +4,7 @@ import FeatureCard from "../utils/FeatureCard";
 const Features = () => {
   return (
     <div className="container py-16">
-      <div className="w-10/12 grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto justify-center">
+      <div className="lg:w-10/12 grid sm:grid-cols-2 md:grid-cols-3 gap-6 mx-auto justify-center">
         {features.map((feature, key) => (
           <FeatureCard
             key={key}

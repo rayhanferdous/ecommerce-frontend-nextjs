@@ -31,7 +31,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-4 gap-4 md:gap-8">
+          <div className="flex flex-wrap justify-between gap-4 md:gap-8">
             {footerLinks.map((link, index) => (
               <FooterLinkContainer
                 key={index}
@@ -44,15 +44,9 @@ const Footer = () => {
       </footer>
 
       <div className="bg-gray-800 py-4">
-        <div className="container flex items-center justify-between">
+        <div className="container flex items-center justify-between max-sm:flex-wrap max-sm:gap-8">
           <p className="text-white">TailCommerce - All Right Reserved</p>
-          <div>
-            <img
-              src="assets/images/methods.png"
-              alt="methods"
-              className="h-5"
-            />
-          </div>
+          <img src="/assets/images/methods.png" alt="methods" className="h-5" />
         </div>
       </div>
     </>

@@ -8,7 +8,7 @@ const Categories = () => {
       <h2 className="text-2xl font-medium text-gray-800 uppercase mb-6">
         shop by category
       </h2>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
         {categories.map((category, key) => (
           <CategoriyCard
             key={key}
