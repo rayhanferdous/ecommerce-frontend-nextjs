@@ -9,10 +9,11 @@ import {
 import NavLinkCard from "../utils/header/NavLinkCard";
 import SearchField from "../utils/header/SearchField";
 import IconCard from "../utils/header/IconCard";
-// import DrawerContainer from "../utils/header/DrawerContainer";
+import DrawerContainer from "../utils/header/DrawerContainer";
 
 const Header = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [openSearch, setOpenSearch] = useState(false);
   return (
     <>
       <header className="py-4 shadow-sm bg-white">
@@ -20,7 +21,30 @@ const Header = () => {
           <Link href="/">
             <img src="/assets/images/logo.svg" alt="Logo" className="w-32" />
           </Link>
-          <SearchField />
+          <div
+            onClick={() => setOpenSearch(!openSearch)}
+            className="hidden max-sm-max:flex w-full justify-end"
+          >
+            <div className="bg-primary p-1.5 rounded-md">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className="w-5 h-5 stroke-white"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div className="block max-sm-max:hidden">
+            <SearchField />
+          </div>
           <div className="flex items-center space-x-4">
             {iconCardItems.map((item, index) => (
               <IconCard
@@ -40,8 +64,16 @@ const Header = () => {
         <div className="container flex gap-5">
           <div
             onClick={() => setOpenDrawer(!openDrawer)}
-            className="px-8 py-4 bg-primary flex items-center cursor-pointer relative group"
+            className="px-8 py-4 bg-primary items-center cursor-pointer hidden max-sm-max:flex"
           >
+            <img
+              src="/assets/images/icons/burger-menu.svg"
+              alt="all-categories"
+              className="w-6"
+            />
+            <span className="capitalize ml-2 text-white">All Categories</span>
+          </div>
+          <div className="px-8 py-4 bg-primary flex items-center cursor-pointer relative group max-sm-max:hidden">
             <img
               src="/assets/images/icons/burger-menu.svg"
               alt="all-categories"
@@ -69,19 +101,40 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between flex-grow md:pl-12 py-5">
-            <div className="flex items-center sm:gap-3 md:gap-6 capitalize">
+          <div className="flex items-center justify-between max-sm-max:justify-end flex-grow md:pl-12 py-5">
+            <div className="flex items-center sm-max:gap-3 md:gap-6 capitalize max-sm-max:hidden">
               {navLinks.map((link, index) => (
                 <NavLinkCard key={index} path={link.path} name={link.name} />
               ))}
             </div>
-            <NavLinkCard path={"/"} name={"Login"} />
+            <Link
+              href={"/"}
+              className="text-white sm-max:text-gray-200 sm-max:hover:text-white transition"
+            >
+              Login
+            </Link>
           </div>
         </div>
       </nav>
-      {/* <DrawerContainer isOpen={openDrawer} setIsOpen={setOpenDrawer}>
-        asdfas
-      </DrawerContainer> */}
+      <DrawerContainer
+        title={"Drawer"}
+        isOpen={openDrawer}
+        setIsOpen={setOpenDrawer}
+      >
+        <div className="items-center flex-col sm-max:gap-3 md:gap-6 capitalize hidden max-sm-max:flex">
+          {navLinks.map((link, index) => (
+            <NavLinkCard key={index} path={link.path} name={link.name} />
+          ))}
+        </div>
+      </DrawerContainer>
+      <DrawerContainer
+        title={"Search"}
+        isOpen={openSearch}
+        setIsOpen={setOpenSearch}
+        position="top"
+      >
+        <SearchField />
+      </DrawerContainer>
     </>
   );
 };
