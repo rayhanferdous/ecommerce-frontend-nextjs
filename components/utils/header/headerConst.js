@@ -20,21 +20,21 @@ export const navLinks = [
 
 export const iconCardItems = [
   {
-    path: "/#",
+    path: "/wishlist",
     img: "heart.svg",
     items: 8,
     isIconNum: true,
     name: "Wishlist",
   },
   {
-    path: "/#",
+    path: "/shop",
     img: "shopping-bag.svg",
     items: 2,
     isIconNum: true,
     name: "Cart",
   },
   {
-    path: "/#",
+    path: "/account",
     img: "user.svg",
     items: 0,
     isIconNum: false,

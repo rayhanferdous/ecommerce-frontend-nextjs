@@ -7,7 +7,7 @@ const page = () => {
         <div class="px-4 py-3 shadow flex items-center gap-4">
           <div class="flex-shrink-0">
             <img
-              src="../assets/images/avatar.png"
+              src="/assets/images/avatar.png"
               alt="profile"
               class="rounded-full w-14 h-14 border border-gray-200 p-1 object-cover"
             />

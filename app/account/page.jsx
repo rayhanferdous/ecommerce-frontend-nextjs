@@ -2,12 +2,12 @@ import React from "react";
 
 const page = () => {
   return (
-    <main className="container grid grid-cols-12 items-start gap-6 pt-4 pb-16">
-      <div className="col-span-3">
+    <main className="container flex gap-6 pt-4 pb-16">
+      <div className="">
         <div className="px-4 py-3 shadow flex items-center gap-4">
           <div className="flex-shrink-0">
             <img
-              src="../assets/images/avatar.png"
+              src="/assets/images/avatar.png"
               alt="profile"
               className="rounded-full w-14 h-14 border border-gray-200 p-1 object-cover"
             />
@@ -122,8 +122,8 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-9 grid grid-cols-3 gap-4">
-        <div className="shadow rounded bg-white px-4 pt-6 pb-8">
+      <div className="flex flex-wrap gap-4">
+        <div className="shadow rounded h-fit bg-white px-4 pt-6 pb-8">
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-medium text-gray-800 text-lg">
               Personal Profile
@@ -139,7 +139,7 @@ const page = () => {
           </div>
         </div>
 
-        <div className="shadow rounded bg-white px-4 pt-6 pb-8">
+        <div className="shadow rounded h-fit bg-white px-4 pt-6 pb-8">
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-medium text-gray-800 text-lg">
               Shipping address
@@ -156,7 +156,7 @@ const page = () => {
           </div>
         </div>
 
-        <div className="shadow rounded bg-white px-4 pt-6 pb-8">
+        <div className="shadow rounded h-fit bg-white px-4 pt-6 pb-8">
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-medium text-gray-800 text-lg">
               Billing address

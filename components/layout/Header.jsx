@@ -85,7 +85,7 @@ const Header = () => {
               {allCategories.map((category, index) => (
                 <Link
                   key={index}
-                  href="/"
+                  href={category.path}
                   className="flex items-center px-6 py-3 hover:bg-gray-100 transition"
                 >
                   <img
@@ -108,7 +108,7 @@ const Header = () => {
               ))}
             </div>
             <Link
-              href={"/"}
+              href={"/login"}
               className="text-white sm-max:text-gray-200 sm-max:hover:text-white transition"
             >
               Login
