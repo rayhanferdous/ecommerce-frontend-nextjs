@@ -14,6 +14,7 @@ const Recommended = async () => {
           <NewArrivalCard
             key={key}
             name={item.name}
+            link={`/product/${item.id}`}
             productImage={item.images[0].src}
             price={item.regular_price}
             actualPrice={item.price}
