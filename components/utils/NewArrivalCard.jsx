@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const NewArrivalCard = ({
   productImage,
@@ -10,7 +11,10 @@ const NewArrivalCard = ({
   review,
 }) => {
   return (
-    <div className="bg-white shadow rounded overflow-hidden group">
+    <Link
+      href={link ?? "/#"}
+      className="bg-white shadow rounded overflow-hidden group"
+    >
       <div className="relative">
         <img src={productImage} alt="product 1" className="w-full" />
         <div
@@ -95,7 +99,7 @@ const NewArrivalCard = ({
       >
         Add to cart
       </a>
-    </div>
+    </Link>
   );
 };
 
