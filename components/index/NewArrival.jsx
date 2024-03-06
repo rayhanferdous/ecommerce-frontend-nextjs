@@ -4,7 +4,6 @@ import NewArrivalCard from "../utils/NewArrivalCard";
 const NewArrival = async () => {
   const products = await fetchWooApi("products");
   const data = await products.json();
-
   return (
     <div className="container pb-16">
       <h2 className="text-2xl font-medium text-gray-800 uppercase mb-6">
@@ -15,6 +14,7 @@ const NewArrival = async () => {
           <NewArrivalCard
             key={key}
             name={item.name}
+            link={`/product/${item.id}`}
             productImage={item.images[0].src}
             price={item.regular_price}
             actualPrice={item.price}
