@@ -1,7 +1,7 @@
 import React from "react";
 import { categories } from "./constants";
 import CategoriyCard from "../utils/CategoriyCard";
-import { fetchWooApi } from "@/ApiHelper/fetchWooApi";
+import { fetchWooApi } from "@//lib/ApiHelper/fetchWooApi";
 
 const Categories = async () => {
   //
