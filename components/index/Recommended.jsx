@@ -1,4 +1,4 @@
-import { fetchWooApi } from "@/app/lib/ApiHelper/fetchWooApi";
+import { fetchWooApi } from "@/ApiHelper/fetchWooApi";
 import NewArrivalCard from "../utils/NewArrivalCard";
 
 const Recommended = async () => {

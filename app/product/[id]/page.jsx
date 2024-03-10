@@ -1,4 +1,4 @@
-import { fetchWooApi } from "@/app/lib/ApiHelper/fetchWooApi";
+import { fetchWooApi } from "@/ApiHelper/fetchWooApi";
 import Recommended from "@/components/index/Recommended";
 import React from "react";
 
