@@ -2,8 +2,8 @@ import React from "react";
 
 const page = () => {
   return (
-    <main className="container grid grid-cols-12 items-start pb-16 pt-4 gap-6">
-      <div className="col-span-8 border border-gray-200 p-4 rounded">
+    <main className="container grid md:grid-cols-12 items-start pb-16 pt-4 gap-6">
+      <div className="md:col-span-6 xl:col-span-8 border border-gray-200 p-4 rounded">
         <h3 className="text-lg font-medium capitalize mb-4">Checkout</h3>
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
@@ -95,7 +95,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="col-span-4 border border-gray-200 p-4 rounded">
+      <div className="md:col-span-6 xl:col-span-4 border border-gray-200 p-4 rounded">
         <h4 className="text-gray-800 text-lg mb-4 font-medium uppercase">
           order summary
         </h4>
